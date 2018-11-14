@@ -18,6 +18,11 @@ int bool_xor(int x, int y) {
     return result;
 }
 
+int bool_equal(int x, int y) {
+    int tmp = x ^ y;
+    return !tmp && 1;
+}
+
 int main(int argc, char const *argv[])
 {
     /* practice 2.12 
@@ -31,6 +36,11 @@ int main(int argc, char const *argv[])
     */
     printf("bool_or: %.2x\n", bool_or(35, 23));
     printf("bool_or: %.2x\n", bool_xor(35, 23));
+
+    printf("bool_equal: %d\n", bool_equal(112, 1122));
+
+    int x = 0xc3;
+    printf("x >> 3: %.2x\n", x >> 3);
     
     return 0;
 }

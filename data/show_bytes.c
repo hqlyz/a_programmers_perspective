@@ -40,6 +40,10 @@ int main(int argc, char const *argv[])
     show_bytes(valp, 1);
     show_bytes(valp, 2);
     show_bytes(valp, 3);
+
+    int x = -195;
+    show_int(x);
+    show_int(x >> 3);
     
     return 0;
 }
