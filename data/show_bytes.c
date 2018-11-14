@@ -31,19 +31,35 @@ void test_show_bytes(int val) {
     show_pointer(ipval);
 }
 
+int func1(unsigned word) {
+    return (int)((word << 24) >> 24);
+}
+
+int func2(unsigned word) {
+    return ((int)word << 24) >> 24;
+}
+
 int main(int argc, char const *argv[])
 {
     // test_show_bytes(112);
 
-    int val = 0x87654321;
-    byte_pointer valp = (byte_pointer)&val;
-    show_bytes(valp, 1);
-    show_bytes(valp, 2);
-    show_bytes(valp, 3);
+    // int val = 0x87654321;
+    // byte_pointer valp = (byte_pointer)&val;
+    // show_bytes(valp, 1);
+    // show_bytes(valp, 2);
+    // show_bytes(valp, 3);
 
-    int x = -195;
-    show_int(x);
-    show_int(x >> 3);
+    // int x = -195;
+    // show_int(x);
+    // show_int(x >> 3);
+    show_int(func1(0x00000076));
+    show_int(func2(0x00000076));
+    show_int(func1(0x87654321));
+    show_int(func2(0x87654321));
+    show_int(func1(0x000000c9));
+    show_int(func2(0x000000c9));
+    show_int(func1(0xedcba987));
+    show_int(func2(0xedcba987));
     
     return 0;
 }
