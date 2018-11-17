@@ -52,14 +52,18 @@ int main(int argc, char const *argv[])
     // int x = -195;
     // show_int(x);
     // show_int(x >> 3);
-    show_int(func1(0x00000076));
-    show_int(func2(0x00000076));
-    show_int(func1(0x87654321));
-    show_int(func2(0x87654321));
-    show_int(func1(0x000000c9));
-    show_int(func2(0x000000c9));
-    show_int(func1(0xedcba987));
-    show_int(func2(0xedcba987));
-    
+
+    // show_int(func1(0x00000076));
+    // show_int(func2(0x00000076));
+    // show_int(func1(0x87654321));
+    // show_int(func2(0x87654321));
+    // show_int(func1(0x000000c9));
+    // show_int(func2(0x000000c9));
+    // show_int(func1(0xedcba987));
+    // show_int(func2(0xedcba987));
+    int i1 = 3510593;
+    float f1 = 3510593.0f;
+    show_int(i1);
+    show_float(f1);
     return 0;
 }
