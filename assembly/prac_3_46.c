@@ -21,3 +21,9 @@ char *get_line() {
     strcpy(result, buf);
     return result;
 }
+
+int main(int argc, char const *argv[])
+{
+    
+    return 0;
+}
